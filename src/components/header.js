@@ -15,13 +15,19 @@ const HeaderPage = styled.header`
     }
 `
 const Logo = styled(Link)`
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     font-weight: 700;
 `
 const Enlaces = styled(Link)`
     padding: .5rem;
+    margin-right: 1rem;
+    font-weight: 600;
     &:last-of-type {
         padding: 0;
+        margin-right: 0;
+    }
+    &.paginaActual {
+        border-bottom: 2px solid white;
     }
     @media all and (max-width: 768px) {
         margin: 0 .5rem;
@@ -44,13 +50,13 @@ const Header = () => {
                     padding: 0;
                 }
             `}>
-                <Logo to={'/'} >Bienes Raices</Logo>
+                <Logo to={'/'} > Bienes Raices </Logo>
             </div>
-            
+
             <Navegacion>
-                <Enlaces to={'/'} >Inicio</Enlaces>
-                <Enlaces to={'/nosotros'} >Nosotros</Enlaces>
-                <Enlaces to={'/propiedades'} >Propiedades</Enlaces>
+                <Enlaces activeClassName='paginaActual' to={'/'} >Inicio</Enlaces>
+                <Enlaces activeClassName='paginaActual' to={'/nosotros'} >Nosotros</Enlaces>
+                <Enlaces activeClassName='paginaActual' to={'/propiedades'} >Propiedades</Enlaces>
             </Navegacion>
         </HeaderPage>
     );
