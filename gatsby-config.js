@@ -19,6 +19,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        api: 'https://localhost:1337',
+        queryLimit: 1000,
+        collectionTypes: ['propiedades', 'paginas', 'categorias']
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
