@@ -2,10 +2,37 @@ import React from "react"
 import Layout from "../components/layout"
 import useInicio from "../hooks/useInicio"
 import styled from "@emotion/styled"
-import { css } from "@emotion/react"
- 
-const Image = styled.img`
-  
+
+import ListadoPropiedades from "../components/listadoPropiedades"
+
+const Contenedor = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  img {
+    width: 40%;
+    margin: 3rem 0;
+  }
+  h1 {
+    margin-top: 5rem;
+  }
+  @media all and (max-width: 1024px) {
+    img {
+      width: 90%;
+    }
+  }
+`
+const Parrafo = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  p {
+    line-height: 1.8;
+  }
+  @media all and (max-width: 1024px) {
+    width: 90%;
+  }
 `
 
 const IndexPage = () => {
@@ -17,9 +44,14 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <h1>{ nombre }</h1>
-      <p>{ contenido }</p>
-      <Image src={imagen} alt="imagen inicio" />
+      <Contenedor>
+        <h1>{ nombre }</h1>
+        <img src={ imagen } />
+        <Parrafo>
+          <p>{ contenido }</p>
+        </Parrafo>
+        <ListadoPropiedades />
+      </Contenedor>
     </Layout>
   )
 }
