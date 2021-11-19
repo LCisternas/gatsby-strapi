@@ -6,6 +6,7 @@ const usePropiedades = () => {
         query {
             allStrapiPropiedades {
                 nodes {
+                    id
                     nombre
                     precio
                     categorias {
@@ -24,6 +25,7 @@ const usePropiedades = () => {
         `
     )
     return resultado.allStrapiPropiedades.nodes.map(propiedad => ({
+        id: propiedad.id,
         nombre: propiedad.nombre,
         precio: propiedad.precio,
         categoria: propiedad.categorias.nombre,
