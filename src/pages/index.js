@@ -46,7 +46,7 @@ const IndexPage = () => {
     <Layout>
       <Contenedor>
         <h1>{ nombre }</h1>
-        <img src={ imagen } />
+        <img src={ imagen } alt="imagen portada" />
         <Parrafo>
           <p>{ contenido }</p>
         </Parrafo>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import urlSlug from 'url-slug';
 
 const Card = styled.div`
     height: 500px;
@@ -37,7 +38,7 @@ const Precio = styled.div`
     justify-content: space-evenly;
     align-items: center;
     h2 {
-        color: #85bb65;
+        color: #722F37;
     }
 `
 const Informacion = styled(Link)`
@@ -46,16 +47,16 @@ const Informacion = styled(Link)`
     justify-content: center;
     height: 60%;
     width: 40%;
-    border: 2px solid #85bb65;
+    border: 2px solid #722F37;
     border-radius: 5px;
-    background-color: white;
-    color: #85bb65;
+    background-color: #722F37;
+    color: white;
     font-weight: 700;
     transition: all 0.3s;
     cursor: pointer;
     &:hover {
-        background-color: #85bb65;
-        color: white;
+        background-color: white;
+        color: #722F37;
     }
     @media all and (max-width: 480px) {
         height: 80%;
@@ -70,7 +71,7 @@ const PropiedadCard = ({ propiedad }) => {
     return (
         <Card>
             <Imagen>
-                <img src={ imagen } />
+                <img src={ imagen } alt="imagen propiedad" />
             </Imagen>
             <Titulo>
                 <h2>{ nombre }</h2>
@@ -78,7 +79,7 @@ const PropiedadCard = ({ propiedad }) => {
             </Titulo>
             <Precio>
                 <h2>$ { precio } </h2>
-                <Informacion to={"/propiedades"} >Mas informacion</Informacion>
+                <Informacion to={ urlSlug( nombre ) } >Mas informacion</Informacion>
             </Precio>
         </Card>
     );
