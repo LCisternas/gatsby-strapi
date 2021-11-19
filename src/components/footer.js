@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 const FooterPage = styled.header`
     background-color: #722F37;
-    padding: 10rem;
+    padding: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

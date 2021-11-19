@@ -40,8 +40,6 @@ const IndexPage = () => {
   const inicio = useInicio()
   const { nombre, contenido, imagen } = inicio[0]
 
-  console.log(imagen)
-
   return (
     <Layout>
       <Contenedor>

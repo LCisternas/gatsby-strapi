@@ -55,8 +55,6 @@ const Header = () => {
 
             <Navegacion>
                 <Enlaces activeClassName='paginaActual' to={'/'} >Inicio</Enlaces>
-                <Enlaces activeClassName='paginaActual' to={'/nosotros'} >Nosotros</Enlaces>
-                <Enlaces activeClassName='paginaActual' to={'/propiedades'} >Propiedades</Enlaces>
             </Navegacion>
         </HeaderPage>
     );

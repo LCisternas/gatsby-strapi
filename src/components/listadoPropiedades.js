@@ -17,7 +17,6 @@ const Contenedor = styled.div`
 const ListadoPropiedades = () => {
 
     const propiedades = usePropiedades()
-    console.log(propiedades)
 
     return (
         <>
