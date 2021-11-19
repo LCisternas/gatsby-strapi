@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 const Card = styled.div`
@@ -39,7 +40,10 @@ const Precio = styled.div`
         color: #85bb65;
     }
 `
-const Informacion = styled.button`
+const Informacion = styled(Link)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60%;
     width: 40%;
     border: 2px solid #85bb65;
@@ -52,6 +56,10 @@ const Informacion = styled.button`
     &:hover {
         background-color: #85bb65;
         color: white;
+    }
+    @media all and (max-width: 480px) {
+        height: 80%;
+        text-align: center;
     }
 `
 
@@ -70,7 +78,7 @@ const PropiedadCard = ({ propiedad }) => {
             </Titulo>
             <Precio>
                 <h2>$ { precio } </h2>
-                <Informacion>Mas informacion</Informacion>
+                <Informacion to={"/propiedades"} >Mas informacion</Informacion>
             </Precio>
         </Card>
     );
