@@ -9,6 +9,15 @@ const usePropiedades = () => {
                     id
                     nombre
                     precio
+                    descripcion
+                    habitaciones
+                    estacionamiento
+                    wc
+                    agentes {
+                        nombre
+                        email
+                        telefono
+                    }
                     categorias {
                         nombre
                     }
@@ -29,7 +38,14 @@ const usePropiedades = () => {
         nombre: propiedad.nombre,
         precio: propiedad.precio,
         categoria: propiedad.categorias.nombre,
-        imagen: propiedad.imagen.localFile.childImageSharp.gatsbyImageData.images.fallback.src
+        imagen: propiedad.imagen.localFile.childImageSharp.gatsbyImageData.images.fallback.src,
+        descripcion: propiedad.descripcion,
+        habitaciones: propiedad.habitaciones,
+        estacionamiento: propiedad.estacionamiento,
+        wc: propiedad.wc,
+        nombreAgente: propiedad.agentes.nombre,
+        telefonoAgente: propiedad.agentes.telefono,
+        emailAgente: propiedad.agentes.email
     }))
 }
 

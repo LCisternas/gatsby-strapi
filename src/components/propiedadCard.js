@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Card = styled.div`
-    border: 2px solid black;
     height: 500px;
     width: 400px;
     border-radius: 5px;
@@ -16,7 +15,7 @@ const Card = styled.div`
 const Titulo = styled.div`
     height: 15%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     h2 {
         text-align: center;
@@ -28,31 +27,50 @@ const Imagen = styled.div`
     justify-content: center;
     align-items: center;
     img {
-        width: 90%;
+        width: 100%;
     }
 `
 const Precio = styled.div`
     height: 15%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    h2 {
+        color: #85bb65;
+    }
+`
+const Informacion = styled.button`
+    height: 60%;
+    width: 40%;
+    border: 2px solid #85bb65;
+    border-radius: 5px;
+    background-color: white;
+    color: #85bb65;
+    font-weight: 700;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+        background-color: #85bb65;
+        color: white;
+    }
 `
 
 const PropiedadCard = ({ propiedad }) => {
 
-    const { nombre, precio, categoria, imagen } = propiedad
+    const { nombre, precio, imagen } = propiedad
 
     return (
         <Card>
-            <Titulo>
-                <h2>{ nombre }</h2>
-                <span>{ categoria }</span>
-            </Titulo>
             <Imagen>
                 <img src={ imagen } />
             </Imagen>
+            <Titulo>
+                <h2>{ nombre }</h2>
+                {/* <span>{ categoria }</span> */}
+            </Titulo>
             <Precio>
                 <h2>$ { precio } </h2>
+                <Informacion>Mas informacion</Informacion>
             </Precio>
         </Card>
     );
