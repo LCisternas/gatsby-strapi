@@ -46,6 +46,7 @@ const Presentacion = styled.div`
     text-align: center;
     img {
         width: 90%;
+        margin-bottom: 5rem;
     }
     span {
         margin-bottom: 2rem;
