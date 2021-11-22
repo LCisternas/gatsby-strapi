@@ -4,7 +4,7 @@ const useInicio = () => {
     const resultado = useStaticQuery(
         graphql`
             query {
-                allStrapiPaginas( filter: { nombre: { eq: "Inicio" } } ){
+                allStrapiPaginas( filter: { nombre: { eq: "¡Bienvenido a BienesRaices!" } } ){
                     nodes {
                         id
                         nombre

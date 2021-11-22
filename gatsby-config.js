@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        api: 'https://localhost:1337',
+        api: 'https://gatsby-strapi-app.herokuapp.com/',
         queryLimit: 1000,
         collectionTypes: ['propiedades', 'paginas', 'categorias']
       }

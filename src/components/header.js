@@ -50,7 +50,7 @@ const Header = () => {
                     padding: 0;
                 }
             `}>
-                <Logo to={'/'} > Bienes Raices </Logo>
+                <Logo to={'/'} > BienesRaices </Logo>
             </div>
 
             <Navegacion>
