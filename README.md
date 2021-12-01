@@ -5,3 +5,6 @@
 * Consuming the Strapi API using graphQL
 * Dynamic data visualization from the API
 * Dynamic routing and automatic creation of static documents when adding new data in Strapi
+
+## Clarification
+This repository only includes the code used in the front-end of the application
